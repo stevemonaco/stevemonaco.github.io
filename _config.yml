@@ -14,21 +14,16 @@ author: Steve Monaco
 copyright: 2020
 
 share:
-  facebook: false
-  twitter: false
-  gplus: false
-  stackoverflow: false
-  lastfm: false
+  facebook: true
+  twitter: true
+  gplus: true
   linkedin: true
-  pinterest: false
-  email: false
+  pinterest: true
+  email: true
 
 social:
   github: stevemonaco
-  stackoverflow: ''
-  linkedin: https://www.linkedin.com/in/steve-monaco/
-  instagram: ''
-  lastfm: ''
+  linkedin: steve-monaco/
   rss: feed.xml
 
 # Google Analytics key, leave blank to ignore
