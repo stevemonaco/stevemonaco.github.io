@@ -1,7 +1,7 @@
 # Jekyll configuration
 
 name: Untitled Blog
-description: Software Developer
+description: Software Development and Engineering
 
 # Url is currently only used only for the RSS feed in feed.xml
 url: https://stevemonaco.github.io/
@@ -17,14 +17,16 @@ share:
   facebook: false
   twitter: false
   gplus: false
+  stackoverflow: false
+  lastfm: false
   linkedin: true
   pinterest: false
-  email: true
+  email: false
 
 social:
   github: stevemonaco
   stackoverflow: ''
-  linkedin:
+  linkedin: https://www.linkedin.com/in/steve-monaco/
   instagram: ''
   lastfm: ''
   rss: feed.xml
