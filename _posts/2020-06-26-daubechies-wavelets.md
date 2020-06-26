@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Practical Calculation of Daubechies Wavelet and Scaling Functions"
-date: 2020-06-25 20:27:00
+date: 2020-06-26 00:15:00
 description: A detailed, code-based explanation on how to recreate the frequently shown graphs of Daubechies Wavelets without wavelet library methods
 tags:
  - C#
