@@ -17,7 +17,7 @@ There are two equivalent nomenclatures: DX and dbX. The db4 (D8) wavelet contain
 # Visualization
 
 ## Number of points at various levels of approximation
-\\ [ P_n = P_0 * 2^L - (2^L - 1) \\]
+\\[ P_n = P_0 * 2^L - (2^L - 1) \\]
 
 |     | 0  | 1  | 2  | 3  | 4   | 5   | 6 
 | db2 | 4  | 7  | 13 | 25 | 49  | 97  | 193
@@ -41,6 +41,7 @@ L - level of approximation
 Daubechies coefficients for the scaling function are frequently given in texts and are given here as a table. The calculation may be covered in a future blog and involves a matrix solver with constraints ([example](https://simple.wikipedia.org/wiki/Daubechies_wavelet)). The constraints are necessary because there are multiple solutions. One constraint is the convention that large values are front-loaded which is known as the extremal phase. The sum of coefficients for a given wavelet index is often normalized to 1 and this is the case here.
 
 ## Scaling function coefficients
+
 | db2 | 0.6830127  | 1.1830127  | 0.3169873  | -0.1830127  |             |           |           | 
 | db3 | 0.47046721 | 1.14111692 | 0.650365   | -0.19093442 | -0.12083221 | 0.0498175 |           | 
 | db4 | 0.32580343 | 1.01094572 | 0.89220014 | -0.03957503 | -0.26450717 | 0.0436163 | 0.0465036 | -0.01498699
@@ -48,9 +49,9 @@ Daubechies coefficients for the scaling function are frequently given in texts a
 ## Wavelet function coefficients
 Wavelet function coefficients are directly derived from the scaling function coefficients via the relationship \\( b_{k} = (-1)^{k}a_{N-1-k} \\)
 
-| db2 | -0.1830127  | -0.3169873 | 1.1830127   | -0.6830127  |             |            |            | 
-| db3 | 0.0498175   | 0.12083221 | -0.19093442 | -0.650365   | 1.141117    | -0.4704672 |            | 
-| db4 | -0.01498699 | -0.0465036 | 0.0436163   | 0.264507174 | -0.03957503 | -0.8922001 | 1.01094568 | -0.325803429
+| db2 | -0.1830127  | -0.3169873 | 1.1830127   | -0.6830127 |             |            |            | 
+| db3 | 0.0498175   | 0.12083221 | -0.19093442 | -0.650365  | 1.14111692  | -0.4704672 |            | 
+| db4 | -0.01498699 | -0.0465036 | 0.0436163   | 0.26450717 | -0.03957503 | -0.8922001 | 1.01094568 | -0.325803429
 
 ```cs
 private static IEnumerable<float> ToWaveletCoefficients(IEnumerable<float> scalingCoefficients) =>
