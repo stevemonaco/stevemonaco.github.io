@@ -1,9 +1,9 @@
 {% include header.html %}
     <div class="wrapper">
       <div class="content">
-        <div class="container container-center">
-          <div class="row">
-            <div class="col-md-8 offset-md-1">
+        <div class="container-fluid d-flex flex-column container-center">
+          <div class="row grow w-100">
+            <div class="col-md-9 offset-md-1">
               <div class="article">
                 <div class="card">
                   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
@@ -34,7 +34,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 hidden-xs">
+            <div class="col-md-2 hidden-xs">
               {% include sidebar.html %}
             </div>
           </div>
