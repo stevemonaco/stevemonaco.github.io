@@ -10,7 +10,7 @@ tags:
 ---
 
 # Background
-Daubechies Wavelets are a family of orthogonal wavelets which are recursively-defined. They are discrete functions where each level of approximation fills in midpoints between points across calculated from the previous level and, in the infinite limit, becomes continuous. There are two equivalent nomenclatures: DX and dbX. The db4 (D8) wavelet contains 4 vanishing moments and 8 taps (coefficients) over a non-zero interval of \\( [0, 7] \\). These are always related by a factor of 2. From here on, only the dbX nomenclature will be used where the wavelet index is X.
+Daubechies Wavelets are a family of orthogonal wavelets which are recursively-defined. They are discrete functions where each level of approximation fills in midpoints between points across calculated from the previous level and, in the infinite limit, becomes continuous. There are two equivalent nomenclatures: DX and dbX. The db4 (D8) wavelet contains 4 vanishing moments and 8 taps (coefficients) over the non-zero interval \\( (0, 7) \\). These are always related by a factor of 2. From here on, only the dbX nomenclature will be used where the wavelet index is X.
 
 # Approach
 A floating point approach is used for simplicity over the dyadic approach which uses fractional powers of two, \\( r = n / {2^L} \\), to derive values of r at the next recursion level. A combination of C# and Python were used to generate the figures and data shown. Python was used when necessary for its superior support for matrix solvers. Links to the project's online source code is provided at the end of the post and is generalized up to at least db10.
