@@ -15,7 +15,7 @@ Daubechies Wavelets are a family of orthogonal wavelets which are recursively-de
 # Approach
 A floating point approach is used for simplicity over the dyadic approach which uses fractional powers of two, \\( r = n / {2^L} \\), to derive values of r at the next recursion level. A combination of C# and Python were used to generate the figures and data shown. Python was used when necessary for its superior support for matrix solvers. Links to the project's online source code is provided at the end of the post and is generalized up to at least db10.
 
-This article aims only to demonstrate the calculation of the wavelet and scaling function which are not well-explained in any of the many sources I've read. No theory, mathematical proofs, or description of the related wavelet transform will be given as those are covered elsewhere. The db4 wavelet will serve as the primary example here because the db2 wavelet is the dominant example in the literature.
+This article aims only to demonstrate the calculation of the wavelet and scaling function which are not well-explained in any of the many sources I've read. No theory, mathematical proofs, or description of the related wavelet transform will be given as those are covered elsewhere. The db4 wavelet will serve as the primary example here because the db2 wavelet is the dominant example in the literature. Values for wavelets other than db4 will occasionally be given to serve as an aid to general implementation.
 
 # Symbol Definitions
 𝜑(r) - Scaling function at point r
@@ -28,18 +28,18 @@ k - coefficient index
 \\( P_x \\) - Number of points at the xth level of approximation
 
 # Core Equations
-Scaling Function 
-\\( 𝜑(r) = \sum\limits_{k=0}^{N-1} a_k 𝜑(2r - k) \\)
-
-Wavelet Function
-\\( 𝜓(r) = \sum\limits_{k=0}^{N-1} b_k 𝜑(2r - k) \\)
-
 Initial Values for Scaling Function
 \\( \begin{cases}
 𝜑(r) = \sum\limits_{k=0}^{N-1} a_k 𝜑(2r - k) \\\\
 \sum\vec{𝜑} = 1
 \end{cases}
 \\)
+
+Scaling Function 
+\\( 𝜑(r) = \sum\limits_{k=0}^{N-1} a_k 𝜑(2r - k) \\)
+
+Wavelet Function
+\\( 𝜓(r) = \sum\limits_{k=0}^{N-1} b_k 𝜑(2r - k) \\)
 
 # Visualization
 The images below demonstrate db2 and db4 wavelets being recursively filled from 0 to 8 levels of approximation.
@@ -266,7 +266,7 @@ Once again, all of the values of 𝜑(r) required to evaluate the right-hand sid
 | 𝜑(2.25) | -0.3020 || 𝜑(4.75) | 5.284e-3 || 
 
 ## Evaluating the Scaling Function via C#
-An iterative approach is used here rather than a true recursive method. The following method calculates the scaling function's next level of approximation and is valid for \\( L \gt 0 \\). \\( L_0 \\) must be separately calculated via the Initial Values section.
+An iterative approach is used here rather than a true recursive method. The following method calculates the scaling function's next level of approximation and is valid for \\( L \gt 0 \\). \\( L_0 \\) must be separately calculated as described by the Initial Values section.
 
 ```cs
 Vector2[] GetScalingLevel(int level, Vector2[] previous, float[] scalingCoefs)
