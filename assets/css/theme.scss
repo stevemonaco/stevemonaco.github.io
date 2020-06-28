@@ -51,7 +51,7 @@ body {
   width: 100%;
 }
 
-h1 { font-size: 2em; }
+h1 { font-size: 2.5em; }
 h2 { font-size: 1.5em; }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1.12em; }
@@ -302,7 +302,10 @@ nav.shrink {
   td {
     padding: .5em;
   }
+}
 
+table.left {
+  margin: 0 0 10px;
 }
 
 table.wide {

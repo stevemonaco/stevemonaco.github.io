@@ -7,4 +7,4 @@ tags:
  - meta
 ---
 
-Finally launched, this blog is where I will discuss topics relevant to programming, engineering and chemistry.
+Finally launched, this blog is where I will discuss topics relevant to programming and engineering. Programming-oriented material in the areas of medicine, chemistry, and machine learning may also be occasionally covered.
