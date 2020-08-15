@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "WPF in 2020: Sample Implementations of MVVM"
-date: 2020-08-14 21:00:00
+date: 2025-08-14 21:00:00
 description: Model-View-ViewModel Implementations in WPF
 tags:
  - C#
