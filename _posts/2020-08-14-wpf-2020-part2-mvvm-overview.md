@@ -4,6 +4,7 @@ title: "WPF in 2020: Concepts and Responsibilities of MVVM"
 date: 2020-08-14 20:00:00
 description: Model-View-ViewModel Architecture for GUI applications
 toc: true
+wide: true
 tags:
  - C#
  - WPF

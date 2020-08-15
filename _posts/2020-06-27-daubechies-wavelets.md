@@ -4,6 +4,7 @@ title: "Practical Calculation of Daubechies Wavelet and Scaling Functions"
 date: 2020-06-27 23:00:00
 description: A detailed, code-based explanation on how to recreate the frequently shown graphs of Daubechies Wavelets without relying upon wavelet library methods
 toc: true
+wide: true
 tags:
  - C#
  - Signals
