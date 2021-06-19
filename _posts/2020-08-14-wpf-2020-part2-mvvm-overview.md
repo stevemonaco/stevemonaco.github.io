@@ -91,13 +91,13 @@ public class RelayCommand : ICommand
 
 	public RelayCommand(Action methodToExecute)
 	{
-		_execute = methodToExecute ?? throw new ArgumentNullException(nameof(methodToExecute), $"{nameof(methodToExecute)} {Resources.IsRequired}");
+		_execute = methodToExecute ?? throw new ArgumentNullException(nameof(methodToExecute));
 	}
 
 	public RelayCommand(Action methodToExecute, Func<bool> canExecuteEvaluator)
 		: this(methodToExecute)
 	{
-		_canExecute = canExecuteEvaluator ?? throw new ArgumentNullException(nameof(canExecuteEvaluator), $"{nameof(canExecuteEvaluator)} {Resources.IsRequired}");
+		_canExecute = canExecuteEvaluator ?? throw new ArgumentNullException(nameof(canExecuteEvaluator));
 	}
 
 	public bool CanExecute(object parameter)
@@ -121,13 +121,13 @@ public class RelayCommand<T> : ICommand
 
 	public RelayCommand(Action<T> execute)
 	{
-		_execute = execute ?? throw new ArgumentNullException(nameof(execute), $"{nameof(execute)} {Resources.IsRequired}");
+		_execute = execute ?? throw new ArgumentNullException(nameof(execute));
 	}
 
 	public RelayCommand(Action<T> execute, Predicate<T> canExecute)
 		: this(execute)
 	{
-		_canExecute = canExecute ?? throw new ArgumentNullException(nameof(canExecute), $"{nameof(canExecute)} {Resources.IsRequired}");
+		_canExecute = canExecute ?? throw new ArgumentNullException(nameof(canExecute));
 	}
 
 	public bool CanExecute(object parameter)
